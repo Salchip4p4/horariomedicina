@@ -1,88 +1,118 @@
-	body {
-		font-family: Segoe UI, sans-serif;
-		font-size: 11px;
-	}
-
-	#contenedor-anos, #contenedor-materias {
-		display: flex;
-		justify-content: space-around;
-		margin-top: 10px;
-	}
-
-	.columna-ano, .columna-materia {
-		width: 18%;
-		border: 1px solid #ddd;
-		padding: 2px;
-		border-radius: 5px;
-		text-align: center;
-	}
-
-	.columna-ano h2, .columna-materia h2 {
-		margin: 1px;
-		padding: 15px;
-		background-color: #f2f2f2;
-		border-radius: 5px;
-		cursor: pointer;
-	}
-
-	.materias-ano, .grupos-subgrupos {
-		margin-top: 1px;
-	}
-
-	.materia, .grupo, .subgrupo {
-		padding: 5px;
-		margin: 5px 0;
-		border: 1px solid #ddd;
-		border-radius: 3px;
-		cursor: pointer;
-	}
-
-	.materia:hover, .grupo:hover, .subgrupo:hover {
-		background-color: #f2f2f2;
-	}
-
-	table {
-		width: 100%;
-		border-collapse: collapse;
-		margin-top: 20px;
-	}
-
-	th, td {
-		border: 1px solid #ddd;
-		padding: 8px;
-		text-align: center;
-	}
-
-	th {
-		background-color: #f2f2f2;
-	}button {
-    padding: 10px 20px;
+body {
+    font-family: 'Segoe UI', sans-serif;
     font-size: 14px;
-    border: none;
+    background-color: #f4f4f4; 
+    color: #333; 
+    margin: 0;
+    padding: 0;
+}
+
+
+#contenedor-anos, #contenedor-materias {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.columna-ano, .columna-materia {
+    width: 22%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.columna-ano h2, .columna-materia h2 {
+    margin: 0;
+    padding: 15px;
+    background-color: #b22222; 
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.columna-ano:hover, .columna-materia:hover {
+    transform: translateY(-5px); 
+}
+
+
+.materia, .grupo, .subgrupo {
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 5px;
+    background-color: #f9f9f9; 
+    font-size: 14px;
+    transition: background-color 0.3s ease;
 }
+
+.materia:hover, .grupo:hover, .subgrupo:hover {
+    background-color: #f2f2f2; 
+}
+
+
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background-color: #b22222; 
+    color: white;
+}
+
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px;
+}
+
 #continuar {
-    background-color: #4CAF50; /* Verde */
+    background-color: #e74c3c; 
     color: white;
 }
 
 #continuar:hover {
-    background-color: #45a049;
+    background-color: #c0392b;
     transform: scale(1.05);
 }
 
 #mostrarHorario {
-    background-color: #008CBA; /* Azul */
+    background-color: #95a5a6; 
     color: white;
 }
+
 #mostrarHorario:hover {
-    background-color: #0077A3;
+    background-color: #7f8c8d;
     transform: scale(1.05);
 }
 
 button:active {
     transform: scale(0.95);
+}
+
+* {
+    transition: all 0.2s ease;
 }
