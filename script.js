@@ -22,47 +22,61 @@ document.addEventListener("DOMContentLoaded", function () {
         "MED302": { nombre: "MED 302 - SEMIOLOGÍA GENERAL", grupos: 6, subgrupos: 5 },
         "MED303": { nombre: "MED 303 - FARMACOLOGÍA Y TERAPÉUTICA MÉDICA", grupos: 6, subgrupos: 4 },
         "SAP300": { nombre: "SAP 300 - SALUD PÚBLICA III", grupos: 3, subgrupos: 1 }
+	"CIR401", { nombre: "CIR 401 - TRUMATOLOGIA Y ORTOPEDIA", grupos: , subgrupos }
+	"CIR402", { nombre: "CIR 402 - OFTALMOLOGIA", gurpos:  , subgrupos: }
+	"CIR403", { nombre: "CIR 403 - ANESTESIOLOGIA", gurpos:  , subgrupos: }
+	"MED400", { nombre: "MED 400 - MEDICINA INTERNA I", gurpos:  , subgrupos: }
+	"MED405", { nombre: "MED 405 - NEUROLOGIA", gurpos:  , subgrupos: }
+	"MED413", { nombre: "MED 413 - DERMATOLOGIA", gurpos:  , subgrupos: }
+	"MED415", { nombre: "MED 415 - PSICOPATOLOGIA", gurpos:  , subgrupos: }
+	"CIR500", { nombre: "CIR 500 - CIRUGIA III", gurpos:  , subgrupos: }
+	"CIR505", { nombre: "CIR 505 - GINECOLOGIA Y OBSTETRICIA", gurpos:  , subgrupos: }
+	"CIR506", { nombre: "CIR 506 - OTORRINOLARINGOLOGIA", gurpos:  , subgrupos: }
+	"MED500", { nombre: "MED 500 - MEDICINA INTERNA II", gurpos:  , subgrupos: }
+	"MED501", { nombre: "MED 501 - PSIQUIATRIA Y SALUD MENTAL", gurpos:  , subgrupos: }
+	"MED504", { nombre: "CIR 506 - PEDIATRIA", gurpos:  , subgrupos: }
+	"MED508", { nombre: "MED 508 - MEDICINA LEGAL Y ETICA MEDICA", gurpos:  , subgrupos: }
     };
 
     // Horarios específicos para cada materia, grupo y subgrupo
     const horariosMaterias = {
         "MED100": { // Código de la materia
-            "A1": { 
+            "A1 Dr. Pedraza ": { 
             "Martes": ["07:00 - 07:45", "07:45 - 08:30", "08:30 - 09:15", "09:15 - 10:00", "10:00 - 10:45", "10:45 - 11:30", "11:30 - 12:15", "12:15 - 13:00"],  
             },
-            "A2": { 
+            "A2 Dr. Pedraza": { 
             "Martes": ["07:00 - 07:45", "07:45 - 08:30", "08:30 - 09:15", "09:15 - 10:00", "13:45 - 14:30", "14:30 - 15:15", "15:15 - 16:00", "16:00 - 16:45" ],           
             },
-            "A3": { 
+            "A3 Dr. Pedraza": { 
             "Martes": ["07:00 - 07:45", "07:45 - 08:30", "08:30 - 09:15", "09:15 - 10:00", "18:15 - 19:00", "19:00 - 19:45", "19:45 - 20:30", "20:30 - 21:15"],
        		},          
-          	"B1": { 
+          	"B1 Dr. Sossa Lino": { 
             "Martes": ["07:00 - 07:45", "07:45 - 08:30", "08:30 - 09:15", "09:15 - 10:00"],
 			"Jueves": ["16:45 - 17:30", "17:30 - 18:15", "18:15 - 19:00", "19:00 - 19:45"],
          	},
-           	"B2": { 
+           	"B2 Dr. Sossa Lino": { 
             "Martes": ["07:00 - 07:45", "07:45 - 08:30", "08:30 - 09:15", "09:15 - 10:00"],
                 "Miércoles": ["16:45 - 17:30", "17:30 - 18:15", "18:15 - 19:00", "19:00 - 19:45"],
            },
-        "B3": { 
+        "B3 Dr. Sossa Lino": { 
                 "Martes": ["07:00 - 07:45", "07:45 - 08:30", "08:30 - 09:15", "09:15 - 10:00", "16:45 - 17:30", "17:30 - 18:15", "18:15 - 19:00", "19:00 - 19:45"], 
            },
-        "C1": { 
+        "C1 Dr. Sempertegui": { 
                 "Martes": ["07:00 - 07:45", "07:45 - 08:30"], 
                 "Viernes": ["07:00 - 07:45", "07:45 - 08:30"],
 		"Sábado": ["07:00 - 07:45", "07:45 - 08:30", "08:30 - 09:15", "09:15 - 10:00"],
         },
-        "C2": { 
+        "C2 Dr. Sempertegui": { 
                 "Martes": ["07:00 - 07:45", "07:45 - 08:30"], 
                 "Viernes": ["07:00 - 07:45", "07:45 - 08:30"],
 		"Sábado": ["10:00 - 10:45", "10:45 - 11:30", "11:30 - 12:15", "12:15 - 13:00"],
         },
-        "C3": { 
+        "C3 Dr. Sempertegui": { 
                 "Martes": ["07:00 - 07:45", "07:45 - 08:30"], 
                 "Viernes": ["07:00 - 07:45", "07:45 - 08:30"],
 		"Jueves": ["18:15 - 19:00", "19:00 - 19:45", "19:45 - 20:30", "20:30 - 21:15"],
         },
-        "D1": { 
+        "D1 ": { 
                 "Jueves": ["07:00 - 07:45", "07:45 - 08:30", "08:30 - 09:15", "09:15 - 10:00", "11:30 - 12:15", "12:15 - 13:00", "13:00 - 13:45", "13:45 - 14:30"], 
         },
         "D2": { 
@@ -870,23 +884,23 @@ document.addEventListener("DOMContentLoaded", function () {
            },
             "MED302": { // Código de la materia
             "A1": { 
-            "Lunes": ["16:45 - 17:30", "17:30 - 18:15"],
+            "Lunes": ["16:45 - 17:30", "17:30 - 18:15"], "Miercoles": ["15:15 - 16:45"],
             "Sábado": ["10:00 - 10:45", "10:45 - 11:30", "11:30 - 12:15", "12:15 - 13:00", "13:00 - 13:45", "13:45 - 14:30"],
             },
             "A2": { 
-            "Lunes": ["16:45 - 17:30", "17:30 - 18:15"],
+            "Lunes": ["16:45 - 17:30", "17:30 - 18:15"], "Miercoles": ["15:15 - 16:45"],
             "Martes": ["10:00 - 10:45", "10:45 - 11:30", "11:30 - 12:15", "12:15 - 13:00", "13:00 - 13:45", "13:45 - 14:30"], 
              },
             "A3": { 
-            "Lunes": ["16:45 - 17:30", "17:30 - 18:15"],
+            "Lunes": ["16:45 - 17:30", "17:30 - 18:15"], "Miercoles": ["15:15 - 16:45"],
             "Sábado": ["13:45 - 14:30", "14:30 - 15:15", "15:15 - 16:00", "16:00 - 16:45", "16:45 - 17:30", "17:30 - 18:15"], 
                },
             "A4": { 
-            "Lunes": ["16:45 - 17:30", "17:30 - 18:15"],
+            "Lunes": ["16:45 - 17:30", "17:30 - 18:15"], "Miercoles": ["15:15 - 16:45"],
             "Jueves": ["10:00 - 10:45", "10:45 - 11:30", "11:30 - 12:15", "12:15 - 13:00", "13:00 - 13:45", "13:45 - 14:30"],
                },
             "A5": { 
-            "Lunes": ["16:45 - 17:30", "17:30 - 18:15"],
+            "Lunes": ["16:45 - 17:30", "17:30 - 18:15"], "Miercoles": ["15:15 - 16:45"],
             "Viernes": ["10:00 - 10:45", "10:45 - 11:30", "11:30 - 12:15", "12:15 - 13:00", "13:00 - 13:45", "13:45 - 14:30"],
               },
             "B1": { 
