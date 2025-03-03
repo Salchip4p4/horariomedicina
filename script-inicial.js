@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Datos de las materias por año (puedes agregar más años y materias)
     const materiasPorAno = {
         "ano1": [
             { codigo: "MED100", nombre: "MED 100 - ANATOMÍA HUMANA" },
@@ -7,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	    { codigo: "SAP100", nombre: "SAP 100 - SALUD PÚBLICA I" },
 	    { codigo: "MAF100", nombre: "MAF 100 - FORMACIÓN SOCIOCULTURAL" },
 			
-            // Agrega más materias de 1º año
         ],
         "ano2": [
             { codigo: "MED200", nombre: "MED 200 - ANATOMÍA PATOLÓGICA" },
@@ -25,38 +23,44 @@ document.addEventListener("DOMContentLoaded", function () {
 			{ codigo: "MED303", nombre: "MED 303 - FARMACOLOGÍA Y TERAPÉUTICA MÉDICA" },
 			{ codigo: "SAP300", nombre: "SAP 300 - SALUD PÚBLICA III" },
 
-            // Agrega más materias de 3º año
         ],
         "ano4": [
-            { codigo: "MED000", nombre: "SIN INFORMACIÓN" },
-            // Agrega más materias de 4º año
+            { codigo: "CIR400", nombre: "CIR 400 - CIRUGIA III" },
+            { codigo: "CIR401", nombre: "CIR 401 - TRUMATOLOGIA Y ORTOPEDIA" },
+			{ codigo: "CIR402", nombre: "CIR 402 - OFTALMOLOGIA" },
+			{ codigo: "CIR403", nombre: "CIR 403 - ANESTESIOLOGIA" },
+			{ codigo: "MED400", nombre: "MED 400 - MEDICINA INTERNA I" },
+			{ codigo: "MED405", nombre: "MED 405 - NEUROLOGIA" },
+			{ codigo: "MED413", nombre: "MED 413 - DERMATOLOGIA" },
+            { codigo: "MED415", nombre: "MED 415 - PSICOPATOLOGIA" },
+
         ],
         "ano5": [
-            { codigo: "MED000", nombre: "SIN INFORMACIÓN" },
-            // Agrega más materias de 5º año
+            { codigo: "CIR500", nombre: "CIR 500 - CIRUGIA III" },
+            { codigo: "CIR505", nombre: "CIR 505 - GINECOLOGIA Y OBSTETRICIA" },
+            { codigo: "CIR506", nombre: "CIR 506 - OTORRINOLARINGOLOGIA" },
+			{ codigo: "MED500", nombre: "MED 500 - MEDICINA INTERNA III" },
+			{ codigo: "MED501", nombre: "MED 501 - PSIQ. Y SALUD MENTAL" },
+			{ codigo: "MED504", nombre: "MED 504 - PEDIATRIA" },
+			{ codigo: "MED508", nombre: "MED 508 - MEDICINA LEGAL Y ETICA M." },
         ]
     };
 
     // Función para mostrar las materias de un año
     window.mostrarMaterias = function (ano) {
         const contenedorMaterias = document.getElementById(`materias-${ano}`);
-        contenedorMaterias.innerHTML = ""; // Limpiar contenido anterior
+        contenedorMaterias.innerHTML = ""; 
 
-        // Obtener las materias del año seleccionado
         const materias = materiasPorAno[ano];
 
         // Crear elementos para cada materia
         materias.forEach(materia => {
             const divMateria = document.createElement("div");
             divMateria.classList.add("materia");
-
-            // Checkbox para seleccionar la materia
             const checkbox = document.createElement("input");
             checkbox.type = "checkbox";
             checkbox.value = materia.codigo;
             checkbox.id = `materia-${materia.codigo}`;
-
-            // Label para el nombre de la materia
             const label = document.createElement("label");
             label.htmlFor = `materia-${materia.codigo}`;
             label.textContent = materia.nombre;
@@ -66,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
             contenedorMaterias.appendChild(divMateria);
         });
 
-        // Mostrar el contenedor de materias
+        
         contenedorMaterias.style.display = "block";
     };
 
